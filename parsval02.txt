@@ -1,0 +1,12 @@
+clc;
+clear all;
+close all;
+x=[1,2,3,4];
+N=length(x)
+X=fft(x);
+LHS=sum(abs(x.*x));
+disp('display LHS');
+disp(LHS);
+RHS=sum(abs(X.*X))/N;
+disp('display RHS');
+disp(RHS);

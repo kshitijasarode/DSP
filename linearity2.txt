@@ -1,0 +1,14 @@
+N=8;
+a=2;
+b=3;
+x1 =[1 2 3 4];
+x2= [8 7 6 5];
+X1 =fft(x1, N);
+X2 =fft(x2, N);
+sum=a*x1+b*x2;
+sum1=fft(sum,N);
+sum2=a* X1 + b* X2;
+disp('Combined signal:');
+disp(sum1);
+disp('DFT of the combined signal:');
+disp(sum2);

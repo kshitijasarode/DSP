@@ -1,0 +1,29 @@
+clc;
+clear all;
+close all;
+x=[0,2,4,6,8];
+N=length(x)-1;
+n=0:N;
+Y=circshift(x,[0 3]);
+subplot(3,2,1);
+stem(n,Y);
+title('Original Signal');
+subplot(3,2,2);
+stem(n,Y);
+title('Cicularly Shifted Signal');
+X1=fft(x);
+Y1=fft(Y);
+% Angle plot
+subplot(3,2,3);
+stem(n,angle(X1));
+title('Phase plot of original signal');
+subplot(3,2,4);
+stem(n,angle(Y1));
+title('Phase plot of circularly shifted signal');
+% Magnitude Plot
+subplot(3,2,5);
+stem(n,abs(X1));
+title('Magnitude plot of original signal');
+subplot(3,2,6);
+stem(n,abs(Y1));
+title('magnitude plot of circularly shifted sigal');

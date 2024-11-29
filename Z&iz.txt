@@ -1,0 +1,13 @@
+clc;
+close all;
+syms n w0
+% first signal
+a=n+1;
+disp('The input equation is')
+disp(a)
+b=ztrans(a);
+disp('The Z-Transform is')
+disp(b)
+c=iztrans(b);
+disp('The Inverse Z-Transform is')
+disp(c)
